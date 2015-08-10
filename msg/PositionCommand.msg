@@ -14,4 +14,5 @@ uint8 TRAJECTORY_STATUS_READY = 1
 uint8 TRAJECTORY_STATUS_COMPLETED = 3
 uint8 TRAJECTROY_STATUS_ABORT = 4
 
+# Its ID number will start from 1, allowing you comparing it with 0.
 uint8 trajectory_flag
