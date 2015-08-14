@@ -69,6 +69,7 @@ add_message_files(
   SO3Command.msg
   StatusData.msg
   TRPYCommand.msg
+  Odometry.msg
 )
 
 generate_messages(
