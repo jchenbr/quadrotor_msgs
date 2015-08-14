@@ -69,6 +69,7 @@ add_message_files(
   SO3Command.msg
   StatusData.msg
   TRPYCommand.msg
+  Odometry.msg
 )
 
 generate_messages(
@@ -79,17 +80,17 @@ generate_messages(
 
 catkin_package(
   #INCLUDE_DIRS include
-  #LIBRARIES irobot_msgs
+  LIBRARIES encode_msgs decode_msgs
   #CATKIN_DEPENDS geometry_msgs nav_msgs
   #DEPENDS system_lib
   CATKIN_DEPENDS message_runtime
 )
 
-add_executable(test_exe src/test_exe.cpp)
+# add_executable(test_exe src/test_exe.cpp)
 add_library(decode_msgs src/decode_msgs.cpp)
 add_library(encode_msgs src/encode_msgs.cpp)
 
-add_dependencies(test_exe quadrotor_msgs_generate_messages_cpp)
+# add_dependencies(test_exe quadrotor_msgs_generate_messages_cpp)
 add_dependencies(encode_msgs quadrotor_msgs_generate_messages_cpp)
 add_dependencies(decode_msgs quadrotor_msgs_generate_messages_cpp)
 
@@ -97,8 +98,8 @@ find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
 
-target_link_libraries(test_exe 
-    decode_msgs 
-    encode_msgs
-)
+# target_link_libraries(test_exe 
+#     decode_msgs 
+#     encode_msgs
+# )
 
