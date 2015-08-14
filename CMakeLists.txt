@@ -80,7 +80,7 @@ generate_messages(
 
 catkin_package(
   #INCLUDE_DIRS include
-  #LIBRARIES irobot_msgs
+  LIBRARIES encode_msgs decode_msgs
   #CATKIN_DEPENDS geometry_msgs nav_msgs
   #DEPENDS system_lib
   CATKIN_DEPENDS message_runtime
