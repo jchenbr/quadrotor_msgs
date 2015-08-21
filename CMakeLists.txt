@@ -70,6 +70,7 @@ add_message_files(
   StatusData.msg
   TRPYCommand.msg
   Odometry.msg
+  PolynomialTrajectory.msg
 )
 
 generate_messages(
