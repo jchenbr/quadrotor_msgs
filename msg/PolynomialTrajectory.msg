@@ -16,6 +16,8 @@ uint32 num_order
 uint32 num_segment
 
 # the polynomial coecfficients of the trajectory.
+float64 start_yaw
+float64 final_yaw
 float64[] coef_x
 float64[] coef_y
 float64[] coef_z
